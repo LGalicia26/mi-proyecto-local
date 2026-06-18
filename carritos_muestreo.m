@@ -1,4 +1,4 @@
-e%% Preamble %%
+%% Preamble %%
 clc
 clear 
 close all
@@ -666,5 +666,18 @@ figure('Units', 'centimeters', 'Position', [0 0 17 12]);
     grid on
     ylabel('Y', 'FontSize', 11, 'Interpreter','latex');
     xlabel('Time [s]','FontSize', 11, 'Interpreter','latex');
-    legend('$x$','$\hat{x}_1$','$\hat{x}_2$','$\hat{x}_3$','$\hat{x}_4$','$\hat{x}_5$','FontSize', 11, 'Interpreter','latex'); % Ajusta los nombres según corresponda
+    legend('$x^1$','$\hat{x}_1$','$\hat{x}_2$','$\hat{x}_3$','$\hat{x}_4$','$\hat{x}_5$','FontSize', 11, 'Interpreter','latex'); % Ajusta los nombres según corresponda
+    set(gca, 'FontSize', 11, 'FontName', 'Times', 'LineWidth', 0.5)
+    %%
+figure('Units', 'centimeters', 'Position', [0 0 17 12]);
+    plot(t, X(:,5), 'k', 'LineWidth', 2); hold on
+    plot(t, X1(:,5), '--', 'Color', colors(1,:), 'LineWidth', 2);
+    plot(t, X2(:,5), '--', 'Color', colors(2,:), 'LineWidth', 2);
+    plot(t, X3(:,5), '--', 'Color', colors(3,:), 'LineWidth', 2);
+    plot(t, X4(:,5), '--', 'Color', colors(4,:), 'LineWidth', 2);
+    plot(t, X5(:,5), '--', 'Color', colors(5,:), 'LineWidth', 2);
+    grid on
+    ylabel('Y', 'FontSize', 11, 'Interpreter','latex');
+    xlabel('Time [s]','FontSize', 11, 'Interpreter','latex');
+    legend('$x^2$','$\hat{x}_1$','$\hat{x}_2$','$\hat{x}_3$','$\hat{x}_4$','$\hat{x}_5$','FontSize', 11, 'Interpreter','latex'); % Ajusta los nombres según corresponda
     set(gca, 'FontSize', 11, 'FontName', 'Times', 'LineWidth', 0.5)
